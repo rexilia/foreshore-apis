@@ -1,0 +1,18 @@
+meta {
+  name: Deactivate payment method
+  type: http
+  seq: 11
+}
+
+delete {
+  url: {{api-url}}/merchants/{{merchant-id}}/payment-methods/8235c0943bd9800023
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}

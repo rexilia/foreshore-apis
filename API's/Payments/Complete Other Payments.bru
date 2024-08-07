@@ -1,0 +1,18 @@
+meta {
+  name: Complete payment
+  type: http
+  seq: 13
+}
+
+post {
+  url: {{api-url}}/payments/82307d25ad42000006/complete
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}

@@ -1,0 +1,23 @@
+meta {
+  name: Update store tips
+  type: http
+  seq: 12
+}
+
+patch {
+  url: {{api-url}}/merchants/{{merchant-id}}/stores/821078f3f81b400f0f/tips
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+body:json {
+  {
+  }
+}

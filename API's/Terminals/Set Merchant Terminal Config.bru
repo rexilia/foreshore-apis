@@ -1,0 +1,27 @@
+meta {
+  name: Update merchant - TC
+  type: http
+  seq: 31
+}
+
+patch {
+  url: {{api-url}}/merchants/{{merchant-id}}/terminals
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+body:json {
+  {
+  	"chipReadDelay": 10,
+  	"idleScreenImageUrl": "https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/fgsczy9v5bmi7zkhjoop",
+  	"showReceipt": true
+  }
+  
+}

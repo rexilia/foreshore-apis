@@ -1,0 +1,18 @@
+meta {
+  name: Terminal REBOOT
+  type: http
+  seq: 50
+}
+
+post {
+  url: {{api-url}}/terminals/tn_vw_YyrFd33ntb7_340Ob7/reboot
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}

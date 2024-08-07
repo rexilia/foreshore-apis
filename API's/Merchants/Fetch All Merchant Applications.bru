@@ -1,0 +1,17 @@
+meta {
+  name: Get all applications
+  type: http
+  seq: 30
+}
+
+get {
+  url: {{api-url}}/partners/{{partner-id}}/applications
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+}

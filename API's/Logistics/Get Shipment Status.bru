@@ -1,0 +1,18 @@
+meta {
+  name: Check shipment status
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{api-url}}/partners/{{partner-id}}/merchants/{{merchant-id}}/shipment/81959be2f487380d28
+  body: none
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}

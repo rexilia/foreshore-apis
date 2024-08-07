@@ -1,0 +1,18 @@
+meta {
+  name: Get order by ID
+  type: http
+  seq: 16
+}
+
+get {
+  url: {{api-url}}/orders/82709717985c60020b
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}

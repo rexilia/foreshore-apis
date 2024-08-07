@@ -1,0 +1,69 @@
+meta {
+  name: Update Order By ID
+  type: http
+  seq: 18
+}
+
+post {
+  url: {{api-url}}/orders/826e85a628c9f8060b
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+body:json {
+  {
+  	"terminal$id": "81448fad5d2b680f05",
+  	"type": "PURCHASE",
+  		"customer": {
+  		"person": {
+  			"id": "abc",
+  			"email": "jaswanth@surfboard.se",
+  			"phone": {
+  				"phoneNumber": "7630054678",
+  				"extension": "91"
+  			}
+  		}
+  	},
+  	"orderLines": [
+  		{
+  			"id": "TERM123NAL",
+  			"name": "BILLING PAPER",
+  			"categoryId":"123-34",
+  			"quantity": 1,
+  			"itemAmount": {
+  				"regular": 300,
+  				"total": 300,
+  				"currency": "SEK",
+  				"tax": [
+  					{
+  						"amount": 20,
+  						"percentage": 20,
+  						"type": "VAT"
+  					}
+  				]
+  			}
+  		}
+  	],
+  		"totalOrderAmount": {
+  			"regular": 300,
+  			"total": 300,
+  			"currency": "SEK",
+  			"campaign": null,
+  			"shipping": null,
+  			"tax": [
+  				{
+  					"amount": 25,
+  					"percentage": 10,
+  					"type": "VAT"
+  				}
+  			]
+  		}
+  }
+}

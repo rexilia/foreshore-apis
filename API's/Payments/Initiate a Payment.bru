@@ -1,0 +1,25 @@
+meta {
+  name: Initiate payment
+  type: http
+  seq: 12
+}
+
+post {
+  url: {{api-url}}/payments
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+body:json {
+  {
+  	"orderId":"82633cfb5fa0900a0b",
+  	"paymentMethod":"CARD"
+  }
+}

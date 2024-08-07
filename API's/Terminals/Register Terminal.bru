@@ -1,0 +1,24 @@
+meta {
+  name: Register terminal - new
+  type: http
+  seq: 49
+}
+
+post {
+  url: {{api-url}}/merchants/{{merchant-id}}/stores/81baa7148b8308000f/terminals
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+body:json {
+  {
+  	"registrationId":"256282"
+  }
+}

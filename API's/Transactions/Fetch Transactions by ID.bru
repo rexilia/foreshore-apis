@@ -1,0 +1,19 @@
+meta {
+  name: Fetch Transactions by ID
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{api-url}}/transactions/824e5c30b10ab01d19/list
+  body: json
+  auth: none
+}
+
+headers {
+  api-key: {{api-key}}
+  api-secret: {{api-secret}}
+  merchant-id: {{merchant-id}}
+  x-page-number: 1
+}
+

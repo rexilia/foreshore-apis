@@ -1,0 +1,18 @@
+meta {
+  name: Add Adjustments
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{api-url}}/adjustmentss
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}

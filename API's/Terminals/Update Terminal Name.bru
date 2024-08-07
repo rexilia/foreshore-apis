@@ -1,0 +1,24 @@
+meta {
+  name: Update terminal details
+  type: http
+  seq: 47
+}
+
+put {
+  url: {{api-url}}/terminals/818b3617facf600605
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+body:json {
+  {
+  	"terminalName":"New Terminal"
+  }
+}

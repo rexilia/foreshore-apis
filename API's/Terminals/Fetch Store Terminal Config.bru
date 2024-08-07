@@ -1,0 +1,18 @@
+meta {
+  name: Fetch store -TC
+  type: http
+  seq: 37
+}
+
+get {
+  url: {{api-url}}/merchants/{{merchant-id}}/stores/819ce64e23c2e80f0f/terminals/config
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}

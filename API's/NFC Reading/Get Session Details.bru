@@ -1,0 +1,18 @@
+meta {
+  name: Get Session Details
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{api-url}}/merchants/{{merchant-id}}/stores/{{store-id}}/terminals/{{terminal-id}}/sessions/827084ea6fd9680549
+  body: none
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}

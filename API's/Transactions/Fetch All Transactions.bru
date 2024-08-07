@@ -1,0 +1,25 @@
+meta {
+  name: Fetch All Transactions
+  type: https
+  seq: 8
+}
+
+get {
+  url: {{api-url}}/transactions
+  body: none
+  auth: none
+}
+
+params:query {
+  ~startDate: 2022-04-10
+  ~endDate: 2022-04-12
+  ~terminalId: 81f878852b3a280904
+  ~query: purchase
+}
+
+headers {
+  api-key: {{api-key}}
+  api-secret: {{api-secret}}
+  merchant-id: {{merchant-id}}
+  x-page-number: 1
+}

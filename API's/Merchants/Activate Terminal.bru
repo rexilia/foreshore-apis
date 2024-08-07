@@ -1,0 +1,18 @@
+meta {
+  name: Activate Terminal
+  type: http
+  seq: 58
+}
+
+post {
+  url: {{api-url}}/partners/{{partner-id}}/merchants/{{merchant-id}}/ship-hardware
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}

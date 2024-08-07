@@ -1,0 +1,24 @@
+meta {
+  name: Register Online Terminal
+  type: http
+  seq: 52
+}
+
+post {
+  url: {{api-url}}/merchants/{{merchant-id}}/stores/824d8d800d6fd00d0f/online-terminals
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+body:json {
+  {
+  	"onlineTerminalMode": "PaymentPage"
+  }
+}

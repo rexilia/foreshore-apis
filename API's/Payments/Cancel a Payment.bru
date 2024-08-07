@@ -1,0 +1,18 @@
+meta {
+  name: Cancel a payment
+  type: http
+  seq: 16
+}
+
+delete {
+  url: {{api-url}}/payments/822d54530923180406
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}

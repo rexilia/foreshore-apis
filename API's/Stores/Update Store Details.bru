@@ -1,0 +1,29 @@
+meta {
+  name: Update store by id
+  type: http
+  seq: 12
+}
+
+put {
+  url: {{api-url}}/partners/{{partner-id}}/merchants/{{merchant-id}}/stores/825a1d330d8428070f
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+body:json {
+  {
+  	"storeName": "tester",
+  		"onlineInfo": {
+  		"merchantWebshopURL": "https://testmerchant.com",
+  		"termsAndConditionsURL": "https://www.termsandconditions.com",
+  		"privacyPolicyURL": "https://www.privacypolicy.com"
+  	}
+  }
+}

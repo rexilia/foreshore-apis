@@ -1,0 +1,18 @@
+meta {
+  name: New Deactivate Store
+  type: http
+  seq: 22
+}
+
+delete {
+  url: {{api-url}}/partners/{{partner-id}}/merchants/{{merchant-id}}/stores/81f9442c18bf38060f
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}

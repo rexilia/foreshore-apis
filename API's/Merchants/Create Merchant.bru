@@ -1,0 +1,60 @@
+meta {
+  name: Create Merchant - test
+  type: http
+  seq: 19
+}
+
+post {
+  url: {{api-url}}/partners/{{partner-id}}/merchants
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+}
+
+
+body:json {
+  {
+  	"country": "SE",
+  	"organisation": {
+  		"corporateId": "1234567894",
+  		"legalName": "Legal Name",
+  		"mccCode": "5192",
+  		"address": {
+  			"careOf": "John Doe",
+  			"addressLine1": "Main Street 123",
+  			"addressLine2": "Building C",
+  			"city": "Stockholm",
+  			"countryCode": "SE",
+  			"postalCode": "123 45"
+  		},
+  		"phone": {
+  			"code": 46,
+  			"number": "123456789"
+  		},
+  		"email": "contact@test.com"
+  	},
+  	"pfMerchantId": "PF123456",
+  	"controlFields": {
+  		"store": {
+  			"name": "Test Store",
+  			"email": "test@test.com",
+  			"phoneNumber": {
+  				"code": 46,
+  				"number": "987654321"
+  			},
+  			"address": {
+  				"careOf": "Jane Doe",
+  				"addressLine1": "Second Street 456",
+  				"city": "Stockholm",
+  				"countryCode": "SE",
+  				"postalCode": "123 46"
+  			}
+  		}
+  	}
+  } 
+}

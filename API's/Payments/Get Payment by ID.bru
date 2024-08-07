@@ -1,0 +1,18 @@
+meta {
+  name: Pay Slip
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{api-url}}/payments/81f9e3ed5baf080d06
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}

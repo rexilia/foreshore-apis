@@ -1,0 +1,59 @@
+meta {
+  name: Create order test
+  type: http
+  seq: 19
+}
+
+post {
+  url: {{api-url}}/orders
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+body:json {
+  {
+  	"terminal$id": "820866bc4142700404",
+  	"type": "purchase",
+  	"orderLines": [
+  		{
+  			"id": "000011TT",
+  			"name": "chidori",
+  			"description": "jutsu ever",
+  			"quantity": 1,
+  			"itemAmount": {
+  				"regular": 100,
+  				"total": 100,
+  				"currency": "SEK",
+  				"tax": [
+  					{
+  						"amount": 100,
+  						"percentage": 0,
+  						"type": "vat"
+  					}
+  				]
+  			}
+  		}
+  	],
+  	"totalOrderAmount": {
+  		"regular": 100,
+  		"campaign": 0,
+  		"shipping": 0,
+  		"total": 100,
+  		"currency": "SEK",
+  		"tax": [
+  			{
+  				"amount": 100,
+  				"percentage": 0,
+  				"type": "vat"
+  			}
+  		]
+  	}
+  }
+}

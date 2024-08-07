@@ -1,0 +1,30 @@
+meta {
+  name: Create Branding for Partner
+  type: http
+  seq: 6
+}
+
+patch {
+  url: {{api-url}}/partners/{{partner-id}}/branding
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+body:json {
+  {
+    "backgroundColor": "#667085",
+    "brandColor": "#697085",
+    "accentColor": "#787085",
+    "rectShape": "rounded",
+    "fontType": "mono",
+    "logoUrl": "https://res.cloudinary.com/image/surfboard-icon.svg",
+    "iconUrl": "https://res.cloudinary.com/image/surfboard-icon.svg"
+  }
+}

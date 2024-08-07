@@ -1,0 +1,18 @@
+meta {
+  name: Get Order Status
+  type: http
+  seq: 22
+}
+
+get {
+  url: {{api-url}}/orders/8263188b3e5ad0150b/status
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}

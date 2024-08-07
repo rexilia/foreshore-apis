@@ -1,0 +1,95 @@
+meta {
+  name: Get Application Status
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{api-url}}/partners/{{partner-id}}/merchants/8268adb369aa680610/status
+  body: json
+  auth: none
+}
+
+params:query {
+  gatewayHeader: SB_CREATE_STORE
+  sort: DESC
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+}
+
+body:json {
+  {
+  	"date": null,
+  	"customer": {
+  		"person": {
+  			"id": "b0f277ed-d51f-4e96-be1f-ad56ec031ee1",
+  			"name": null,
+  			"email": null,
+  			"phoneNumber": null,
+  			"birthDate": null,
+  			"personalNumber": null
+  		}
+  	},
+  	"terminal$id": "82635410890ee00504",
+  	"referenceId": "501235",
+  	"status": null,
+  	"purchaseOrderId": null,
+  	"companyPurchase": false,
+  	"type": "purchase",
+  	"totalOrderAmount": {
+  		"regular": 4000,
+  		"campaign": 0,
+  		"shipping": 0,
+  		"total": 4000,
+  		"currency": "SEK",
+  		"tax": [
+  			{
+  				"amount": 0,
+  				"percentage": 0,
+  				"type": "vat"
+  			}
+  		]
+  	},
+  	"orderLines": [
+  		{
+  			"quantity": 1,
+  			"id": "2284",
+  			"categoryId": "",
+  			"campaign": 0,
+  			"name": "Dubbel Burger 31",
+  			"description": null,
+  			"itemAmount": {
+  				"regular": 4000,
+  				"campaign": 0,
+  				"shipping": 0,
+  				"total": 4000,
+  				"currency": "SEK",
+  				"tax": [
+  					{
+  						"amount": 0,
+  						"percentage": 0,
+  						"type": "vat"
+  					}
+  				]
+  			}
+  		}
+  	],
+  	"metaData": {
+  		"Partner": "Fredos - Fredos"
+  	},
+  	"controlFunctions": {
+  		"_authMode": "AUTH",
+  		"authMode": "AUTH",
+  		"online": {
+  			"delayCapture": false,
+  			"enforceTokenization": true
+  		},
+  		"callBackUrl": null
+  	},
+  	"adjustments": []
+  }
+}

@@ -1,0 +1,24 @@
+meta {
+  name: Create Multi Merchant
+  type: http
+  seq: 20
+}
+
+post {
+  url: {{api-url}}/partners/{{partner-id}}/multi-merchant
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+}
+
+body:json {
+  {
+    "country": "SE",
+    "zipCode":"12345"
+  }
+}

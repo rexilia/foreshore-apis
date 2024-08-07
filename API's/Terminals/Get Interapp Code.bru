@@ -1,0 +1,18 @@
+meta {
+  name: Interapp code
+  type: http
+  seq: 39
+}
+
+get {
+  url: {{api-url}}/merchants/{{merchant-id}}/stores/8218d39d9bc548070f/terminals/interapp
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}

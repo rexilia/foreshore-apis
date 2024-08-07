@@ -1,0 +1,18 @@
+meta {
+  name: Get payment method by ID
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{api-url}}/merchants/{{merchant-id}}/payment-methods/824daf856046700a23
+  body: none
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}

@@ -1,0 +1,24 @@
+meta {
+  name: Link terminal
+  type: http
+  seq: 46
+}
+
+put {
+  url: {{api-url}}/merchants/{{merchant-id}}/stores/{{store-id}}/terminals/{{terminal-id}}/link
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+body:json {
+  {
+  	"terminal$id":"816582957d5ce00a05"
+  }
+}

@@ -1,0 +1,18 @@
+meta {
+  name: Void payment
+  type: http
+  seq: 11
+}
+
+put {
+  url: {{api-url}}/payments/81f9e3ed5baf080d06/void
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}

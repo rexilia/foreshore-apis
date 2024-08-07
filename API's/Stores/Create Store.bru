@@ -1,0 +1,40 @@
+meta {
+  name: New Create Store
+  type: http
+  seq: 20
+}
+
+post {
+  url: {{api-url}}/partners/{{partner-id}}/merchants/{{merchant-id}}/stores
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+body:json {
+  {
+  	"storeName": "Trial store",
+  	"email": "TS@gmail.com",
+  	"acquirerMID": "PF123456",
+  	"phoneNumber": {
+  		"code": 44,
+  		"number": "3214576980"
+  	},
+  	"address": "Upplandsgatan 28",
+  	"city": "LEKSAND",
+  	"zipCode": "12345",
+  	"country": "SE",
+  	"onlineInfo": {
+  		"merchantWebshopURL":  "https://4088-124-29-212-142.ngrok-free.app/test",
+  		"paymentPageHostURL": "https://test.surfboard.se",
+  		"termsAndConditionsURL": "https://www.surfpayapp.com/hubfs/connect/surfboardpayments-instorepayments.jpg",
+  		"privacyPolicyURL":  "https://www.surfpayapp.com/hubfs/connect/surfboardpayments-instorepayments.jpg"
+  	}
+  }
+}

@@ -1,0 +1,18 @@
+meta {
+  name: Capture payment
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{api-url}}/payments/8231d54c69ae480206/capture
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}

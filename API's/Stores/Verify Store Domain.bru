@@ -1,0 +1,24 @@
+meta {
+  name: Verify Store Domains
+  type: http
+  seq: 18
+}
+
+post {
+  url: {{api-url}}/partners/{{partner-id}}/merchants/{{merchant-id}}/stores/{{store-id}}/verify
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+body:json {
+  {
+    "domainType":"MERCHANT_WEBSHOP_URL"
+  }
+}

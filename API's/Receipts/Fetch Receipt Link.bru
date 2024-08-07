@@ -1,0 +1,22 @@
+meta {
+  name: Fetch Receipt Link
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{api-url}}/receipts/823a68158b3930060b/link
+  body: json
+  auth: none
+}
+
+params:query {
+  ~lang: fk
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}

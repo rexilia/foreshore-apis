@@ -1,0 +1,41 @@
+meta {
+  name: Create Return Request
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{api-url}}/partners/{{partner-id}}/merchants/{{merchant-id}}/logistics/return
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+body:json {
+  {
+    "email": "an@surfboard.se",
+    "phoneNumber": {
+			"code":"+91",
+			"number":"00000000"
+		},
+	  "terminalId":"816a0ff6bc0fb00404",
+		"name": "John Doe",
+		"address": {
+			"addressLine1": "Main Street 123",
+			"addressLine2": "Building C",
+			"addressLine3": null,
+			"city": "Stockholm",
+			"countryCode": "SE",
+			"postalCode": "123 45"
+		},
+    "deliveryInstruction": "Go left after the elevator",
+    "comment": "Stopped",
+    "reasonForReturn": "NOT_USING_SERVICE"
+  }
+}

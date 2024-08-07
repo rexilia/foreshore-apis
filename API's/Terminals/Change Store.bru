@@ -1,0 +1,25 @@
+meta {
+  name: Change store
+  type: http
+  seq: 55
+}
+
+post {
+  url: {{api-url}}/terminals/change
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+body:json {
+  {
+  	"terminal$id": "c_7OiJQ_mVgIWgZF1-YLMA1",
+  	"storeId": "8218d39d9bc548070f"
+  }
+}

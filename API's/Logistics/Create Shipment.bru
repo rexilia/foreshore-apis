@@ -1,0 +1,41 @@
+meta {
+  name: Create shipment
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{api-url}}/partners/{{partner-id}}/merchants/{{merchant-id}}/shipment
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+body:json {
+  {
+  	"shippingAddress": {
+  		"name": "Test",
+  		"addressLine1": "Test",
+  		"city": "Test",
+  		"countryCode": "SE",
+  		"postalCode": "12345",
+  		"phone": {
+  			"code": 46,
+  			"number": "123456789"
+  		},
+  		"email":"test@gmail.com"
+  	},
+  	"lineItems": [
+  		{
+  			"productId": "8190555946ccc00321",
+  			"quantity": "1"
+  		}
+  	]
+  }
+}

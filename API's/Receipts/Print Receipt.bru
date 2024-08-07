@@ -1,0 +1,29 @@
+meta {
+  name: Print Receipt
+  type: http
+  seq: 13
+}
+
+put {
+  url: {{api-url}}/receipts/82119c6dc605c01719/print
+  body: json
+  auth: none
+}
+
+params:query {
+  ~lang: fk
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+
+body:json {
+  {
+  	"language": "sv"
+  }
+}

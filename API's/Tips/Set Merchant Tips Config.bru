@@ -1,0 +1,24 @@
+meta {
+  name: Update merchant tips
+  type: http
+  seq: 11
+}
+
+patch {
+  url: {{api-url}}/merchants/{{merchant-id}}/tips
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+body:json {
+  {
+  	"tipConfig": "ENABLED"
+  }
+}

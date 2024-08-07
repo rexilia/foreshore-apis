@@ -1,0 +1,27 @@
+meta {
+  name: Update terminal tips
+  type: http
+  seq: 10
+}
+
+patch {
+  url: {{api-url}}/merchants/{{merchant-id}}/stores/{{store-id}}/terminals/tn_vw_YyrFd33ntb7_340Ob7/tips
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+body:json {
+  {
+    "tipConfig": "ENABLED",
+    "tipLevel1": 10,
+    "tipLevel2": 20,
+    "tipLevel3": 30
+  }
+}

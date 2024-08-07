@@ -1,0 +1,28 @@
+meta {
+  name: Add Receipt Information
+  type: http
+  seq: 12
+}
+
+put {
+  url: {{api-url}}/receipts/821967f013d600060b
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+
+body:json {
+  {
+  	"sequenceNumber": "1234567",
+  	"cashRegisterName": "Test",
+  	"cashierName": "Amanda",
+  	"customerName": "Tom"
+  }
+}

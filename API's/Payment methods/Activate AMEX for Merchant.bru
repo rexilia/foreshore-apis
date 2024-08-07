@@ -1,0 +1,24 @@
+meta {
+  name: Add amex payment method
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{api-url}}/merchants/{{merchant-id}}/payment-methods/amex
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+body:json {
+  {
+  	"amexMID":""
+  }
+}

@@ -1,0 +1,17 @@
+meta {
+  name: Get all merchants under partner
+  type: http
+  seq: 32
+}
+
+get {
+  url: {{api-url}}/partners/{{partner-id}}/merchants
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+}

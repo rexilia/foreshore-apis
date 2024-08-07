@@ -1,0 +1,24 @@
+meta {
+  name: Delink terminal
+  type: http
+  seq: 43
+}
+
+delete {
+  url: {{api-url}}/merchants/{{merchant-id}}/stores/81468c958e5640040f/terminals/816561357d5ce00f04/link
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+body:json {
+  {
+  	"terminal$id":"816582957d5ce00a05"
+  }
+}

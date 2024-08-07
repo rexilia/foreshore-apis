@@ -1,0 +1,17 @@
+meta {
+  name: Get all multi merchant group
+  type: http
+  seq: 34
+}
+
+get {
+  url: {{api-url}}/partners/{{partner-id}}/multi-merchants
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+}

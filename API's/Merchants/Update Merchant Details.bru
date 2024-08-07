@@ -1,0 +1,25 @@
+meta {
+  name: Update merchant details
+  type: http
+  seq: 38
+}
+
+put {
+  url: {{api-url}}/partners/{{partner-id}}/merchants/{{merchant-id}}
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+
+body:json {
+  {
+  	"merchantLanguage": "da"
+  }
+}

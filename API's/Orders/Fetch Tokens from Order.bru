@@ -1,0 +1,23 @@
+meta {
+  name: Get tokens for order
+  type: http
+  seq: 24
+}
+
+get {
+  url: {{api-url}}/orders/81fdd605eefc380e0b/tokens
+  body: json
+  auth: none
+}
+
+params:query {
+  ~startDate: 2024-01-31
+  ~endDate: 2024-05-20
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}

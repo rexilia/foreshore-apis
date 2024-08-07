@@ -1,0 +1,18 @@
+meta {
+  name: Check payment status
+  type: http
+  seq: 15
+}
+
+get {
+  url: {{api-url}}/payments/82521f8e6020480106/capture
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}

@@ -1,0 +1,25 @@
+meta {
+  name: Update Terminal Config
+  type: http
+  seq: 45
+}
+
+put {
+  url: {{api-url}}/partners/{{partner-id}}/merchants/{{merchant-id}}/stores/{{store-id}}/terminals/{{terminal-id}}/config
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+body:json {
+  {
+  	"needConfig": true,
+  	"needImage": true
+  }
+}

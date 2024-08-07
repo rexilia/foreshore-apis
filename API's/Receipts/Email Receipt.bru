@@ -1,0 +1,26 @@
+meta {
+  name: Email Receipt
+  type: http
+  seq: 11
+}
+
+put {
+  url: {{api-url}}/receipts/82307d25ad42000006/email
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+
+body:json {
+  {
+  	"email":"rexilia@surfboard.se",
+  	"storeId":"825a1cac8d8428040f"
+  }
+}

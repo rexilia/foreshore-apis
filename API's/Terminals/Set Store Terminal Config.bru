@@ -1,0 +1,25 @@
+meta {
+  name: Update store -TC
+  type: http
+  seq: 33
+}
+
+patch {
+  url: {{api-url}}/merchants/{{merchant-id}}/stores/818b4b90c192f00e0f/terminals
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
+body:json {
+  {
+  	"wifiSsid": "surfboard",
+  	"wifiPassword": "surfbo"
+  }
+}

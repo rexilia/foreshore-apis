@@ -1,0 +1,19 @@
+meta {
+  name: Get all terminals under merchant
+  type: http
+  seq: 35
+}
+
+get {
+  url: {{api-url}}/partners/{{partner-id}}/merchants/{{merchant-id}}/terminals
+  body: none
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  API-KEY: {{api-key}}
+  API-SECRET: {{api-secret}}
+  MERCHANT-ID: {{merchant-id}}
+}
+
