@@ -1,0 +1,4 @@
+script:post-response {
+  if (![200, 201].includes(res.status))
+  throw Error(`Request failed with status code ${res.status}`)
+}
